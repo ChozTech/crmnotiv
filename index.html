@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notiv CRM</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <h2>Notiv CRM</h2>
+      <nav>
+        <ul>
+          <li onclick="navigateTo('dashboard')">Dashboard</li>
+          <li onclick="navigateTo('contacts')">Contacts</li>
+          <li onclick="navigateTo('deals')">Deals</li>
+          <li onclick="navigateTo('tasks')">Tasks</li>
+          <li onclick="navigateTo('calendar')">Calendar</li>
+          <li onclick="navigateTo('newsletter')">Newsletter</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section id="dashboard" class="view active">
+        <h1>Welcome to Notiv</h1>
+        <p class="mission">Empowering student founders with the tools to track, close, and grow their startup ventures.</p>
+        <div class="ticker-wrap">
+          <div class="ticker">🚀 Ohio State founder raises pre-seed... | 📈 USC AI team closes partnership... | 🧠 MIT launches new venture studio... | 💡 Berkeley students win tech grant...</div>
+        </div>
+      </section>
+
+      <section id="contacts" class="view"><h2>Contacts</h2><p>[Manage your leads and relationships]</p></section>
+      <section id="deals" class="view"><h2>Deals</h2><p>[Visualize your sales pipeline]</p></section>
+      <section id="tasks" class="view"><h2>Tasks</h2><p>[Track what matters most today]</p></section>
+
+      <section id="calendar" class="view">
+        <h2>Calendar</h2>
+        <form id="calendarForm">
+          <input type="text" id="eventTitle" placeholder="Event title" required />
+          <input type="date" id="eventDate" required />
+          <button type="submit">Add Event</button>
+        </form>
+        <ul id="eventList"></ul>
+      </section>
+
+      <section id="newsletter" class="view">
+        <h2>Founder Newswire</h2>
+        <p>Live updates from the college startup ecosystem — pitch wins, pre-seed funding, launch announcements, and more.</p>
+        <ul class="news-feed">
+          <li><strong>🚀 Georgia Tech:</strong> "Spaceboard" wins Top 5 finalist at NASA Demo Day.</li>
+          <li><strong>💸 Harvard:</strong> "Slipstream AI" raises $100k from Dorm Room Fund.</li>
+          <li><strong>🌐 UCLA:</strong> New crypto API for college fintech apps launches MVP.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
